@@ -70,7 +70,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  animalNoiseCurveDuration: 5
+  animalNoiseCurveDuration: 15
   animalNoiseVolume: 10
   playerHumanTriggerLevel: 1
   playerHumanCurve:
@@ -97,8 +97,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  playerHumanCurveDuration: 1
-  playerHumanVolume: -10
+  playerHumanCurveDuration: 15
+  playerHumanVolume: 5
   patientHumanTriggerLevel: 2
   patientHumanCurve:
     serializedVersion: 2
@@ -124,8 +124,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  patientHumanCurveDuration: 10
-  patientHumanVolume: 25
+  patientHumanCurveDuration: 15
+  patientHumanVolume: 20
   patientDistance0: 5
   animalNoiseDistance0: 5
   patientDistance1: 10
@@ -137,6 +137,7 @@ MonoBehaviour:
   patientDistance4: 30
   animalNoiseDistance4: 30
   audioMixer: {fileID: 24100000, guid: 00ea34167bd23bd4181fd34366312171, type: 2}
+  contaminationSystem: {fileID: 0}
 --- !u!82 &3471699330450514644
 AudioSource:
   m_ObjectHideFlags: 0
@@ -150,13 +151,13 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 771a5c5e2e635cc4e89971e5912be857, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 200
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

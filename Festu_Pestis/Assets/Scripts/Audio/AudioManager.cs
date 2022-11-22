@@ -12,35 +12,35 @@ public class AudioManager : MonoBehaviour
 
     [Header("Animal Noise Sound FX")]
     [Tooltip("The contamination level that should trigger the audio curve")]
-    [SerializeField] int animalNoiseTriggerLevel = 0;
+    [SerializeField] [Range(0, 4)] int animalNoiseTriggerLevel = 0;
     bool animalNoiseActive = false;
 
     [SerializeField] AnimationCurve animalNoiseCurve;
     [SerializeField] float animalNoiseCurveDuration = 2;
     float timerAnimalNoiseCurveDuration = 0;
-    [SerializeField] float animalNoiseVolume = 5;
+    [SerializeField] [Range(-80, 20)] float animalNoiseVolume = 5;
     float currentAnimalNoiseVolume = 0;
 
     [Header("Player Human Sound FX")]
     [Tooltip("The contamination level that should trigger the audio curve")]
-    [SerializeField] int playerHumanTriggerLevel = 0;
+    [SerializeField] [Range(0, 4)] int playerHumanTriggerLevel = 0;
     bool playerHumanActive = false;
 
     [SerializeField] AnimationCurve playerHumanCurve;
     [SerializeField] float playerHumanCurveDuration = 2;
     float timerPlayerHumanCurveDuration = 0;
-    [SerializeField] float playerHumanVolume = 10;
+    [SerializeField] [Range(-80, 20)] float playerHumanVolume = 10;
     float currentPlayerHumanVolume = 0;
 
     [Header("Patient Human Sound FX")]
     [Tooltip("The contamination level that should trigger the audio curve")]
-    [SerializeField] int patientHumanTriggerLevel = 0;
+    [SerializeField] [Range(0, 4)] int patientHumanTriggerLevel = 0;
     bool patientHumanActive = false;
 
     [SerializeField] AnimationCurve patientHumanCurve;
     [SerializeField] float patientHumanCurveDuration = 2;
     float timerPatientHumanCurveDuration = 0;
-    [SerializeField] float patientHumanVolume = 5;
+    [SerializeField] [Range(-80, 20)] float patientHumanVolume = 5;
     float currentPatientHumanVolume;
 
     [Header("Audio Group 3D Max Hearing Distance")]
@@ -85,7 +85,6 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         audioMixer.GetFloat("AnimalNoiseVolume", out currentAnimalNoiseVolume);
-        Debug.Log("At start: " + currentAnimalNoiseVolume);
     }
 
     private void Update()
@@ -316,8 +315,62 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    private void GetMaxDistance() ///MAKE SURE THE CONTAMINATION AUDIO CLIP SCRIPT CAN ACCESS AND SET ITS OWN MAX DISTANCE
+    public float GetMaxDistance(string audioGroupName) ///MAKE SURE THE CONTAMINATION AUDIO CLIP SCRIPT CAN ACCESS AND SET ITS OWN MAX DISTANCE
     {
-        Debug.Log("Testing");
+        float maxDistance = 0;
+
+        if(audioGroupName == "Animal Noise SFX")
+        {
+            switch (((int)contaminationSystem.CurrentBeats()))
+            {
+                case 0:
+                    maxDistance = animalNoiseDistance0;
+                    break;
+
+                case 1:
+                    maxDistance = animalNoiseDistance1;
+                    break;
+
+                case 2:
+                    maxDistance = animalNoiseDistance2;
+                    break;
+
+                case 3:
+                    maxDistance = animalNoiseDistance3;
+                    break;
+
+                case 4:
+                    maxDistance = animalNoiseDistance4;
+                    break;
+            }
+        } else if(audioGroupName == "Patient Human SFX")
+        {
+
+            switch(((int)contaminationSystem.CurrentBeats()))
+            {
+                case 0:
+                    maxDistance = patientDistance0;
+                break;
+
+                case 1:
+                    maxDistance = patientDistance1;
+                break;
+
+                case 2:
+                    maxDistance = patientDistance2;
+                    break;
+
+                case 3:
+                    maxDistance = patientDistance3;
+                    break;
+
+                case 4:
+                    maxDistance = patientDistance4;
+                    break;
+            }
+
+        }
+        
+        return maxDistance;
     }
 }
