@@ -26,7 +26,27 @@ public class Contamination_System : MonoBehaviour
     public static float contaminationTimer;
 
     [SerializeField]
-    private bool isContaminated;
+    public static bool isContaminated;
+
+    [SerializeField]
+    private const float contaminationCase0 = 15f;
+
+
+    [SerializeField]
+    private const float contaminationCase1 = 30f;
+
+
+    [SerializeField]
+    private const float contaminationCase2 = 45f;
+
+
+    [SerializeField]
+    private const float contaminationCase3 = 60f;
+
+    [SerializeField]
+    private const float contaminationCase4 = 60f;
+
+
 
 
     void Start()
@@ -39,36 +59,38 @@ public class Contamination_System : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(contaminationTimer);
+        // contaminationCase = contaminationTimer;
+
+       // Debug.Log(contaminationTimer);
         if (isContaminated && contaminationTimer < 60)
         {
             contaminationTimer += Time.deltaTime * contaminationLevel;
 
             switch (contaminationTimer)
             {
-                case < 15f:
+                case < contaminationCase0:
                     currentBeat = Contamination_Beats.Level0;
-                    Debug.Log("You are coughing");
+                    // Debug.Log("You are coughing");
                     break;
 
-                case < 30f:
+                case < contaminationCase1:
                     currentBeat = Contamination_Beats.Level1;
-                    Debug.Log("You hear Heartbeats");
+                    //   Debug.Log("You hear Heartbeats");
                     break;
 
                 case < 45f:
                     currentBeat = Contamination_Beats.Level2;
-                    Debug.Log("You see a black Vignette");
+                    //  Debug.Log("You see a black Vignette");
                     break;
 
                 case < 60f:
                     currentBeat = Contamination_Beats.Level3;
-                    Debug.Log("You see a red Vignette");
+                    // Debug.Log("You see a red Vignette");
                     break;
 
                 case >= 60f:
                     currentBeat = Contamination_Beats.Level4;
-                    Debug.Log("You are now a beast");
+                    //  Debug.Log("You are now a beast");
                     break;
             }
         }
