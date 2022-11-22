@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     [Header("Animal Noise Sound FX")]
     [Tooltip("The contamination level that should trigger the audio curve")]
     [SerializeField] int animalNoiseTriggerLevel = 0;
-    bool animalNoiseActive = true;
+    bool animalNoiseActive = false;
 
     [SerializeField] AnimationCurve animalNoiseCurve;
     [SerializeField] float animalNoiseCurveDuration = 2;
@@ -24,7 +24,7 @@ public class AudioManager : MonoBehaviour
     [Header("Player Human Sound FX")]
     [Tooltip("The contamination level that should trigger the audio curve")]
     [SerializeField] int playerHumanTriggerLevel = 0;
-    bool playerHumanActive = true;
+    bool playerHumanActive = false;
 
     [SerializeField] AnimationCurve playerHumanCurve;
     [SerializeField] float playerHumanCurveDuration = 2;
@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
     [Header("Patient Human Sound FX")]
     [Tooltip("The contamination level that should trigger the audio curve")]
     [SerializeField] int patientHumanTriggerLevel = 0;
-    bool patientHumanActive = true;
+    bool patientHumanActive = false;
 
     [SerializeField] AnimationCurve patientHumanCurve;
     [SerializeField] float patientHumanCurveDuration = 2;
@@ -68,9 +68,11 @@ public class AudioManager : MonoBehaviour
     [Header("Required Components")]
     [SerializeField] AudioMixer audioMixer;
 
+    [SerializeField] Contamination_System contaminationSystem;
+
     private void Awake()
     {
-        if(Instance != null && Instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(this);
         }
@@ -89,21 +91,188 @@ public class AudioManager : MonoBehaviour
     private void Update()
     {
 
-        if (playerHumanActive)
+        if (!playerHumanActive)
+        {
+            ActivatePlayerHuman();
+        }
+        else
         {
             PlayerHumanFadeIn();
         }
 
-        if (patientHumanActive)
+        if (!patientHumanActive)
+        {
+            ActivatePatientHuman();
+        }
+        else
         {
             PatientHumanFadeIn();
         }
 
-        if (animalNoiseActive)
+        if (!animalNoiseActive)
         {
-            AnimalNoiseFadeIn();            
-        }    
-      
+            ActivateAnimalNoise();
+        }
+        else
+        {
+            AnimalNoiseFadeIn();
+        }
+
+    }
+
+    private void ActivatePlayerHuman()
+    {
+        switch (playerHumanTriggerLevel)
+        {
+            case 0: //Infected
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level0)
+                {
+                    playerHumanActive = true;
+                }
+
+                break;
+
+            case 1: //Beat 1
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level1)
+                {
+                    playerHumanActive = true;
+                }
+
+                break;
+
+            case 2: //Beat 2
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level2)
+                {
+                    playerHumanActive = true;
+                }
+
+                break;
+
+            case 3: //Beat 3
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level3)
+                {
+                    playerHumanActive = true;
+                }
+
+                break;
+
+            case 4: //Full Transitioned
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level4)
+                {
+                    playerHumanActive = true;
+                }
+
+                break;
+        }
+    }
+
+    private void ActivatePatientHuman()
+    {
+
+        switch (patientHumanTriggerLevel)
+        {
+            case 0: //Infected
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level0)
+                {
+                    patientHumanActive = true;
+                }
+
+                break;
+
+            case 1: //Beat 1
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level1)
+                {
+                    patientHumanActive = true;
+                }
+
+                break;
+
+            case 2: //Beat 2
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level2)
+                {
+                    patientHumanActive = true;
+                }
+
+                break;
+
+            case 3: //Beat 3
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level3)
+                {
+                    patientHumanActive = true;
+                }
+
+                break;
+
+            case 4: //Full Transitioned
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level4)
+                {
+                    patientHumanActive = true;
+                }
+
+                break;
+        }
+
+    }
+
+    private void ActivateAnimalNoise()
+    {
+        switch (animalNoiseTriggerLevel)
+        {
+            case 0: //Infected
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level0)
+                {
+                    animalNoiseActive = true;
+                }
+
+                break;
+
+            case 1: //Beat 1
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level1)
+                {
+                    animalNoiseActive = true;
+                }
+
+                break;
+
+            case 2: //Beat 2
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level2)
+                {
+                    animalNoiseActive = true;
+                }
+
+                break;
+
+            case 3: //Beat 3
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level3)
+                {
+                    animalNoiseActive = true;
+                }
+
+                break;
+
+            case 4: //Full Transitioned
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level4)
+                {
+                    animalNoiseActive = true;
+                }
+
+                break;
+        }
     }
 
     private void AnimalNoiseFadeIn()
@@ -116,7 +285,7 @@ public class AudioManager : MonoBehaviour
             currentAnimalNoiseVolume = animalNoiseVolume * animalNoiseCurve.Evaluate(timerAnimalNoiseCurveDuration / animalNoiseCurveDuration);
             audioMixer.SetFloat("AnimalNoiseVolume", currentAnimalNoiseVolume);
         }
-      
+
     }
 
     private void PlayerHumanFadeIn()
@@ -136,14 +305,15 @@ public class AudioManager : MonoBehaviour
     {
 
         if (timerPatientHumanCurveDuration < patientHumanCurveDuration)
-        {if (timerPatientHumanCurveDuration < patientHumanCurveDuration)
+        {
+            if (timerPatientHumanCurveDuration < patientHumanCurveDuration)
             {
                 timerPatientHumanCurveDuration += Time.deltaTime;
                 currentPatientHumanVolume = patientHumanVolume * patientHumanCurve.Evaluate(timerPatientHumanCurveDuration / patientHumanCurveDuration);
                 audioMixer.SetFloat("PatientHumanVolume", currentPatientHumanVolume);
             }
         } //CURRENTPATIENT MUST BE TO SOMETHING NOT 0
-     
+
     }
 
     private void GetMaxDistance() ///MAKE SURE THE CONTAMINATION AUDIO CLIP SCRIPT CAN ACCESS AND SET ITS OWN MAX DISTANCE
