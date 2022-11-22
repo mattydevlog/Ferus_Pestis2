@@ -7,13 +7,13 @@ public class AudioManager : MonoBehaviour
 {
     [Header("Audio Contamination Transitions")]
 
-    [Header("Flies Sound FX")]
-    [SerializeField] AnimationCurve fliesCurve;
-    [SerializeField] float fliesCurveDuration = 2;
-    float timerFliesCurveDuration = 0;
+    [Header("Animal Noise Sound FX")]
+    [SerializeField] AnimationCurve animalNoiseCurve;
+    [SerializeField] float animalNoiseCurveDuration = 2;
+    float timerAnimalNoiseCurveDuration = 0;
 
-    [SerializeField] float fliesVolume = 5;
-    float currentFliesVolume = 0;
+    [SerializeField] float animalNoiseVolume = 5;
+    float currentAnimalNoiseVolume = 0;
 
     [Header("Player Human Sound FX")]
     [SerializeField] AnimationCurve playerHumanCurve;
@@ -37,30 +37,30 @@ public class AudioManager : MonoBehaviour
     private void Update()
     {
 
-        if(timerPlayerHumanCurveDuration < playerHumanCurveDuration)
+        if (timerPlayerHumanCurveDuration < playerHumanCurveDuration)
         {
             PlayerHumanFadeIn();
             Debug.Log(currentPlayerHumanVolume);
         }
 
-        if(timerPatientHumanCurveDuration < patientHumanCurveDuration)
+        if (timerPatientHumanCurveDuration < patientHumanCurveDuration)
         {
             PatientHumanFadeIn();
         }
 
-        if(timerFliesCurveDuration < fliesCurveDuration)
+        if (timerAnimalNoiseCurveDuration < animalNoiseCurveDuration)
         {
-            FliesFadeIn();
+            AnimalNoiseFadeIn();
         }
 
     }
 
-    private void FliesFadeIn()
+    private void AnimalNoiseFadeIn()
     {
-        timerFliesCurveDuration += Time.deltaTime;
+        timerAnimalNoiseCurveDuration += Time.deltaTime;
 
-        currentFliesVolume = fliesVolume * fliesCurve.Evaluate(timerFliesCurveDuration / fliesCurveDuration);
-        audioMixer.SetFloat("FliesVolume", currentFliesVolume);
+        currentAnimalNoiseVolume = animalNoiseVolume * animalNoiseCurve.Evaluate(timerAnimalNoiseCurveDuration / animalNoiseCurveDuration);
+        audioMixer.SetFloat("AnimalNoiseVolume", currentAnimalNoiseVolume);
     }
 
     private void PlayerHumanFadeIn()
