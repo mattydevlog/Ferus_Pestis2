@@ -1723,6 +1723,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3471699330450514645, guid: a401cac97c7012f4aacba9e37ccffb04,
+        type: 3}
+      propertyPath: patientHumanVolume
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3471699330450514645, guid: a401cac97c7012f4aacba9e37ccffb04,
+        type: 3}
+      propertyPath: playerHumanCurveDuration
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3471699330450514646, guid: a401cac97c7012f4aacba9e37ccffb04,
         type: 3}
       propertyPath: m_RootOrder

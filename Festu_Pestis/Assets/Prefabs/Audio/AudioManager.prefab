@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1734382e443dee4883bd1ec658d3c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalNoiseTriggerLevel: 2
   animalNoiseCurve:
     serializedVersion: 2
     m_Curve:
@@ -71,6 +72,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   animalNoiseCurveDuration: 5
   animalNoiseVolume: 10
+  playerHumanTriggerLevel: 1
   playerHumanCurve:
     serializedVersion: 2
     m_Curve:
@@ -97,6 +99,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   playerHumanCurveDuration: 1
   playerHumanVolume: -10
+  patientHumanTriggerLevel: 2
   patientHumanCurve:
     serializedVersion: 2
     m_Curve:
@@ -123,6 +126,16 @@ MonoBehaviour:
     m_RotationOrder: 4
   patientHumanCurveDuration: 10
   patientHumanVolume: 25
+  patientDistance0: 5
+  animalNoiseDistance0: 5
+  patientDistance1: 10
+  animalNoiseDistance1: 10
+  patientDistance2: 15
+  animalNoiseDistance2: 15
+  patientDistance3: 20
+  animalNoiseDistance3: 20
+  patientDistance4: 30
+  animalNoiseDistance4: 30
   audioMixer: {fileID: 24100000, guid: 00ea34167bd23bd4181fd34366312171, type: 2}
 --- !u!82 &3471699330450514644
 AudioSource:
