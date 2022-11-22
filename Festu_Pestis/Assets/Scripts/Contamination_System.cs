@@ -23,7 +23,7 @@ public class Contamination_System : MonoBehaviour
     private float contaminationLevel;
 
     [SerializeField]
-    private float contaminationTimer;
+    public static float contaminationTimer;
 
     [SerializeField]
     private bool isContaminated;
