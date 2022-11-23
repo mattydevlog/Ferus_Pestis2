@@ -10,6 +10,12 @@ using UnityEngine.Rendering.Universal;
 
 public class VFXManager : MonoBehaviour
 {
+    [Header("Required Components")]
+    
+    [SerializeField] Contamination_System contaminationSystem;
+    [SerializeField] Material vignette;
+    [SerializeField] Volume volume;
+
     [Header("Vignette FX")]
     
 
@@ -18,12 +24,28 @@ public class VFXManager : MonoBehaviour
 
     bool redVignetteOpacityActive = false;
     
+
+    
+    [SerializeField] AnimationCurve vignetteOpacityCurve;
+    [SerializeField] float vignetteOpacityDuration = 10;
+    float timerVignetteOpacity = 0;
+
+    [SerializeField] float vignetteOpacity = 0.6f;
+    [SerializeField] float currentVignetteOpacity = 0;
+
+    [Header("Red Vignette Intensity")]
+    [SerializeField] [Range(0, 4)] int redVignetteIntensityTriggerLevel = 0;
+
+    bool redVignetteIntensityActive = false;
+
+    
     [SerializeField] AnimationCurve vignetteIntensityCurve;
     [SerializeField] float vignetteIntensityDuration = 10;
     float timerVignetteIntensity = 0;
 
     [SerializeField] float vignetteIntensity = 0.6f;
     [SerializeField] float currentVignetteIntensity = 0;
+
 
     [Header("Red Vignette Size")]
     [SerializeField] [Range(0, 4)] int redVignetteSizeTriggerLevel = 0;
@@ -81,14 +103,19 @@ public class VFXManager : MonoBehaviour
     [SerializeField] float maxPulse = 0.2f;
     [SerializeField] float currentPulse = 0;*/
 
-    [Header("Required Components")]
-    
-    [SerializeField] Contamination_System contaminationSystem;
-    [SerializeField] Material vignette;
-    [SerializeField] Volume volume;
+    private void Awake()
+    {
+        
+    }
+
 
     private void Start()
     {
+
+        vignette.SetFloat("_FullscreenIntensity", 0);
+        vignette.SetFloat("_VignietteIntensity", 0);
+        
+        
         if (volume.profile.TryGet<DepthOfField>(out depthOfField))
         {
             
@@ -124,6 +151,15 @@ public class VFXManager : MonoBehaviour
         else
         {
             VignetteFadeIn();
+        }
+
+        if (!redVignetteIntensityActive)
+        {
+            ActivateRedVignetteIntensity();
+        }
+        else
+        {
+            VignetteIntensityFadeIn();
         }
         
         if (!redVignetteSizeActive)
@@ -215,6 +251,59 @@ public class VFXManager : MonoBehaviour
                 break;
         }
     }
+
+    private void ActivateRedVignetteIntensity()
+    {
+        switch (redVignetteIntensityTriggerLevel)
+        {
+            case 0: //Infected
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level0)
+                {
+                    redVignetteIntensityActive = true;
+                }
+
+                break;
+
+            case 1: //Beat 1
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level1)
+                {
+                    redVignetteIntensityActive = true;
+                }
+
+                break;
+
+            case 2: //Beat 2
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level2)
+                {
+                    redVignetteIntensityActive = true;
+                }
+
+                break;
+
+            case 3: //Beat 3
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level3)
+                {
+                    redVignetteIntensityActive = true;
+                }
+
+                break;
+
+            case 4: //Full Transitioned
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level4)
+                {
+                    redVignetteIntensityActive = true;
+                }
+
+                break;
+        }
+    }
+
+    
     
     private void ActivateRedVignetteSize()
     {
@@ -422,12 +511,26 @@ public class VFXManager : MonoBehaviour
 
     private void VignetteFadeIn()
     {
+        if(timerVignetteOpacity  < vignetteOpacityDuration)
+        {
+            timerVignetteOpacity += Time.deltaTime;
+
+            currentVignetteOpacity = vignetteOpacity * vignetteOpacityCurve.Evaluate(timerVignetteOpacity / vignetteOpacityDuration);
+            vignette.SetFloat("_FullscreenIntensity", currentVignetteOpacity);
+            
+        }
+        
+    }
+
+     private void VignetteIntensityFadeIn()
+    {
         if(timerVignetteIntensity  < vignetteIntensityDuration)
         {
             timerVignetteIntensity += Time.deltaTime;
 
             currentVignetteIntensity = vignetteIntensity * vignetteIntensityCurve.Evaluate(timerVignetteIntensity / vignetteIntensityDuration);
-            vignette.SetFloat("_FullscreenIntensity", currentVignetteIntensity);
+            vignette.SetFloat("_VignietteIntensity", currentVignetteIntensity);
+            
         }
         
     }
