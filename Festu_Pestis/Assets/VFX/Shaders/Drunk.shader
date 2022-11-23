@@ -1,4 +1,4 @@
-Shader "Hidden/Drunk"
+Shader "Custom/Drunk"
 {
     Properties
     {

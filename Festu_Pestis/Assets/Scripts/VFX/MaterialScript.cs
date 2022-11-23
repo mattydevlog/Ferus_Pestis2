@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class MaterialScript : MonoBehaviour
 {
-    [SerializeField] Material material;
+    
+    public Material material;
     
     
-    private void OnRenderImage(RederTexture source, RenderTexture destination)
+    private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         if(material == null)
         {
