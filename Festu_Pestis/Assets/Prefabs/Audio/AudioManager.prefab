@@ -79,26 +79,35 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
+      time: 0.42847916
+      value: 1.0434772
+      inSlope: 1.0299037
+      outSlope: 1.0299037
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0042725
+      value: 0.16212845
+      inSlope: -0.8981162
+      outSlope: -0.8981162
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.06922944
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   playerHumanCurveDuration: 15
-  playerHumanVolume: 5
+  playerHumanVolume: 10
   patientHumanTriggerLevel: 2
   patientHumanCurve:
     serializedVersion: 2
@@ -125,17 +134,17 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   patientHumanCurveDuration: 15
-  patientHumanVolume: 20
-  patientDistance0: 5
-  animalNoiseDistance0: 5
-  patientDistance1: 10
-  animalNoiseDistance1: 10
-  patientDistance2: 15
-  animalNoiseDistance2: 15
-  patientDistance3: 20
-  animalNoiseDistance3: 20
-  patientDistance4: 30
-  animalNoiseDistance4: 30
+  patientHumanVolume: 18
+  patientDistance0: 0
+  animalNoiseDistance0: 0
+  patientDistance1: 1
+  animalNoiseDistance1: 1
+  patientDistance2: 8
+  animalNoiseDistance2: 10
+  patientDistance3: 12
+  animalNoiseDistance3: 8
+  patientDistance4: 15
+  animalNoiseDistance4: 4
   audioMixer: {fileID: 24100000, guid: 00ea34167bd23bd4181fd34366312171, type: 2}
   contaminationSystem: {fileID: 0}
 --- !u!82 &3471699330450514644
@@ -149,7 +158,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2430218988635327321, guid: 00ea34167bd23bd4181fd34366312171,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 771a5c5e2e635cc4e89971e5912be857, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 973600c7829cecc43a525ce47c951a7c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.4
   m_Pitch: 1

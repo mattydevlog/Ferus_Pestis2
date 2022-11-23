@@ -1,6 +1,8 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Contamination_effects : MonoBehaviour
 {
@@ -14,6 +16,9 @@ public class Contamination_effects : MonoBehaviour
     private float timerCoughDuration = 0;
 
     private bool isCoughing;
+
+    [SerializeField]
+    private AudioSource cough;
 
     void Start()
     {
@@ -44,9 +49,13 @@ public class Contamination_effects : MonoBehaviour
     {
         if (Time.time > nextCough)
         {
+            
             nextCough = Time.time + coughRate;
             Debug.Log("You coughed");
             isCoughing = true;
+            FirstPersonController.MoveSpeed = 2.0f;
+            cough.Play();
+
             //Set new movespeed here
             //Play Coughsound
         }
@@ -56,7 +65,8 @@ public class Contamination_effects : MonoBehaviour
     void StopCoughing()
     {
         timerCoughDuration = 0;
-
+        FirstPersonController.MoveSpeed = 4.0f;
+        cough.Pause();
         //Reset movespeed here
     }
 }
