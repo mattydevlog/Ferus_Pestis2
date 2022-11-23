@@ -62,7 +62,7 @@ public class Contamination_System : MonoBehaviour
     {
         // contaminationCase = contaminationTimer;
 
-       // Debug.Log(contaminationTimer);
+        // Debug.Log(contaminationTimer);
         if (isContaminated && contaminationTimer < 60)
         {
             contaminationTimer += Time.deltaTime * contaminationLevel;
@@ -87,12 +87,12 @@ public class Contamination_System : MonoBehaviour
                 case < 60f:
                     currentBeat = Contamination_Beats.Level3;
                     // Debug.Log("You see a red Vignette");
-                    
+
                     break;
 
                 case >= 60f:
                     currentBeat = Contamination_Beats.Level4;
-                    
+
                     //  Debug.Log("You are now a beast");
                     break;
             }
@@ -104,7 +104,7 @@ public class Contamination_System : MonoBehaviour
     {
         isContaminated = true;
     }
-    
+
     public Contamination_Beats CurrentBeats()
     {
         return currentBeat;
