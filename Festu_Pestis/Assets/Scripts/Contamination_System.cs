@@ -53,7 +53,7 @@ public class Contamination_System : MonoBehaviour
     void Start()
     {
         contaminationLevel = 1;
-        contaminationTimer = 50;
+        contaminationTimer = 0;
         isContaminated = false;
 
     }
