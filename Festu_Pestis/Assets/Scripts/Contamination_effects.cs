@@ -18,11 +18,24 @@ public class Contamination_effects : MonoBehaviour
     private bool isCoughing;
 
     [SerializeField]
+    private float normalSpeed = 4.0f;
+
+    [SerializeField]
+    private float coughMovementSpeed = 2.0f;
+
+    [SerializeField]
+    private float wolfSpeed = 100.0f;
+
+
+    [SerializeField]
     private AudioSource cough;
+
+    public static bool isWolf;
 
     void Start()
     {
         isCoughing = false;
+        isWolf = false;
     }
 
 
@@ -42,6 +55,12 @@ public class Contamination_effects : MonoBehaviour
                 StopCoughing();
             }
         }
+        if (Contamination_System.isContaminated && Contamination_System.contaminationTimer >= 60)
+        {
+            WolfMode();
+            isWolf = true;
+        }
+
     }
 
 
@@ -49,15 +68,13 @@ public class Contamination_effects : MonoBehaviour
     {
         if (Time.time > nextCough)
         {
-            
+
             nextCough = Time.time + coughRate;
             Debug.Log("You coughed");
             isCoughing = true;
-            FirstPersonController.MoveSpeed = 2.0f;
+            FirstPersonController.MoveSpeed = coughMovementSpeed;
             cough.Play();
 
-            //Set new movespeed here
-            //Play Coughsound
         }
 
     }
@@ -65,8 +82,14 @@ public class Contamination_effects : MonoBehaviour
     void StopCoughing()
     {
         timerCoughDuration = 0;
-        FirstPersonController.MoveSpeed = 4.0f;
+        FirstPersonController.MoveSpeed = normalSpeed;
         cough.Pause();
-        //Reset movespeed here
+
+    }
+
+    void WolfMode()
+    {
+        FirstPersonController.MoveSpeed = wolfSpeed;
+        Debug.Log("Fast!");
     }
 }
