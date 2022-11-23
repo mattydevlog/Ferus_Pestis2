@@ -1,3 +1,4 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -86,10 +87,12 @@ public class Contamination_System : MonoBehaviour
                 case < 60f:
                     currentBeat = Contamination_Beats.Level3;
                     // Debug.Log("You see a red Vignette");
+                    
                     break;
 
                 case >= 60f:
                     currentBeat = Contamination_Beats.Level4;
+                    
                     //  Debug.Log("You are now a beast");
                     break;
             }
@@ -101,11 +104,13 @@ public class Contamination_System : MonoBehaviour
     {
         isContaminated = true;
     }
-
+    
     public Contamination_Beats CurrentBeats()
     {
         return currentBeat;
+
     }
+
 }
 
 
