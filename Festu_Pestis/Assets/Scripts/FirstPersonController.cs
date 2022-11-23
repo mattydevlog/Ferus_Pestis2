@@ -11,6 +11,7 @@ namespace StarterAssets
 #endif
     public class FirstPersonController : MonoBehaviour
     {
+        
 
 
         [Header("Player")]
@@ -206,7 +207,7 @@ namespace StarterAssets
 
         private void JumpAndGravity()
         {
-            if (Grounded)
+            if (Grounded && Contamination_effects.isWolf)
             {
                 // reset the fall timeout timer
                 _fallTimeoutDelta = FallTimeout;
