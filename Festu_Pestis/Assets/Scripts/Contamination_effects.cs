@@ -7,13 +7,14 @@ using UnityEngine.Audio;
 public class Contamination_effects : MonoBehaviour
 {
     [SerializeField]
-    private float coughRate = 5f;
+    private float coughRate = 2f;
     [SerializeField]
     private float nextCough = 0.0f;
     [SerializeField]
-    private float coughDuration = 1.5f;
+    private float coughDuration = 1f;
 
-    private float timerCoughDuration = 0;
+
+    private float timerCoughDuration = 0f;
 
     private bool isCoughing;
 
@@ -26,6 +27,9 @@ public class Contamination_effects : MonoBehaviour
     [SerializeField]
     private float wolfSpeed = 100.0f;
 
+    [SerializeField]
+    private float preDelay = 3.0f;
+
 
     [SerializeField]
     private AudioSource cough;
@@ -36,6 +40,7 @@ public class Contamination_effects : MonoBehaviour
     {
         isCoughing = false;
         isWolf = false;
+
     }
 
 
@@ -66,24 +71,27 @@ public class Contamination_effects : MonoBehaviour
 
     void Cough()
     {
-        if (Time.time > nextCough)
+
+
+        if (Time.time > nextCough && !isCoughing)
         {
 
-            nextCough = Time.time + coughRate;
-            Debug.Log("You coughed");
+
             isCoughing = true;
             FirstPersonController.MoveSpeed = coughMovementSpeed;
             cough.Play();
+            Debug.Log("You coughed");
 
         }
-
     }
 
     void StopCoughing()
     {
+        nextCough = Time.time + coughRate;
         timerCoughDuration = 0;
         FirstPersonController.MoveSpeed = normalSpeed;
-        cough.Pause();
+        cough.Stop();
+        isCoughing = false;
 
     }
 
