@@ -20,7 +20,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Flies
+  m_Name: Animal Noise SFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 7571f11ca2e0db1498cfc9fb80f1d003
   m_Children: []
@@ -50,7 +50,7 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: c38e0d7b550682548858675423be93de
-    name: FliesVolume
+    name: AnimalNoiseVolume
   - guid: a07edf712c0c25e4c815846a16679346
     name: MasterVolume
   - guid: 170d38139d16dc64d8ffb0110fdca2cf
@@ -113,8 +113,9 @@ AudioMixerSnapshotController:
   m_SnapshotID: 541f004ad6f07ca438ff12cceb431d2a
   m_FloatValues:
     eb716510c1979eb4c8b1f7e0e93fc250: 0
-    fbb12c388f70e134ca947d752d53b14d: 0
-    c38e0d7b550682548858675423be93de: 0
+    170d38139d16dc64d8ffb0110fdca2cf: -80
+    fbb12c388f70e134ca947d752d53b14d: -80
+    c38e0d7b550682548858675423be93de: -80
   m_TransitionOverrides: {}
 --- !u!243 &2430218988635327321
 AudioMixerGroupController:
