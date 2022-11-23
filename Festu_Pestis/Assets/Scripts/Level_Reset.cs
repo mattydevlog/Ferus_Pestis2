@@ -7,6 +7,6 @@ public class Level_Reset : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene("Mathias_Scene");
+        SceneManager.LoadScene("Main_Scene");
     }
 }
