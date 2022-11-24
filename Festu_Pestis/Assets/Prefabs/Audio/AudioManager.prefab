@@ -45,69 +45,114 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1734382e443dee4883bd1ec658d3c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalNoiseTriggerLevel: 2
+  animalNoiseTriggerLevel: 0
   animalNoiseCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 0.21477672
+      outSlope: 0.21477672
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.20787127
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 2
-      outSlope: 2
+      time: 0.21161325
+      value: 0.13859162
+      inSlope: 0.9263325
+      outSlope: 0.9263325
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  animalNoiseCurveDuration: 15
-  animalNoiseVolume: 10
-  playerHumanTriggerLevel: 1
-  playerHumanCurve:
-    serializedVersion: 2
-    m_Curve:
+      inWeight: 0.16480292
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.42847916
-      value: 1.0434772
-      inSlope: 1.0299037
-      outSlope: 1.0299037
+      time: 0.37489527
+      value: 0.31736067
+      inSlope: 1.2615198
+      outSlope: 1.2615198
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1.0042725
-      value: 0.16212845
-      inSlope: -0.8981162
-      outSlope: -0.8981162
+      time: 0.7332937
+      value: 0.895968
+      inSlope: 1.9584445
+      outSlope: 1.9584445
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.06922944
+      inWeight: 0.30707002
+      outWeight: 0.2468621
+    - serializedVersion: 3
+      time: 0.86764365
+      value: 0.99863386
+      inSlope: -0.58467793
+      outSlope: -0.58467793
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.316137
+      outWeight: 0.29591104
+    - serializedVersion: 3
+      time: 1.0015197
+      value: 0.004716933
+      inSlope: -15.671078
+      outSlope: -15.671078
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.06407779
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  playerHumanCurveDuration: 15
-  playerHumanVolume: 10
+  animalNoiseCurveDuration: 120
+  animalNoiseVolume: 14
+  playerHumanTriggerLevel: 1
+  playerHumanCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.00045914017
+      value: -0.0011425968
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.16840929
+      value: 1.0220497
+      inSlope: -0.0292813
+      outSlope: -0.0292813
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.24666734
+    - serializedVersion: 3
+      time: 0.32907414
+      value: 0.0014233422
+      inSlope: 0.043791704
+      outSlope: 0.043791704
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.13036296
+    - serializedVersion: 3
+      time: 0.99958396
+      value: 0.02087758
+      inSlope: 0.34855124
+      outSlope: 0.34855124
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.12534225
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  playerHumanCurveDuration: 90
+  playerHumanVolume: 12
   patientHumanTriggerLevel: 2
   patientHumanCurve:
     serializedVersion: 2
@@ -122,19 +167,46 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 2
-      outSlope: 2
+      time: 0.24979158
+      value: 0.9329915
+      inSlope: 5.7248716
+      outSlope: 5.7248716
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.498932
+      value: 1.9874873
+      inSlope: 2.214389
+      outSlope: 2.214389
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.14839508
+      outWeight: 0.14253494
+    - serializedVersion: 3
+      time: 0.751291
+      value: 2.0168755
+      inSlope: -3.5250502
+      outSlope: -3.5250502
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.15604326
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.18309212
+      outSlope: 0.18309212
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.13916695
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  patientHumanCurveDuration: 15
-  patientHumanVolume: 18
+  patientHumanCurveDuration: 60
+  patientHumanVolume: 6
   patientDistance0: 0
   animalNoiseDistance0: 0
   patientDistance1: 1
@@ -143,8 +215,8 @@ MonoBehaviour:
   animalNoiseDistance2: 10
   patientDistance3: 12
   animalNoiseDistance3: 8
-  patientDistance4: 15
-  animalNoiseDistance4: 4
+  patientDistance4: 3
+  animalNoiseDistance4: 6
   audioMixer: {fileID: 24100000, guid: 00ea34167bd23bd4181fd34366312171, type: 2}
   contaminationSystem: {fileID: 0}
 --- !u!82 &3471699330450514644
@@ -160,13 +232,13 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 973600c7829cecc43a525ce47c951a7c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 200
+  Priority: 250
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
