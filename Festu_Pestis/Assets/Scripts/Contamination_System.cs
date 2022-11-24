@@ -21,7 +21,7 @@ public class Contamination_System : MonoBehaviour
     private GameObject player;
 
     [SerializeField]
-    private float contaminationLevel;
+    private float contaminationMultiplier;
 
     [SerializeField]
     public static float contaminationTimer;
@@ -30,29 +30,29 @@ public class Contamination_System : MonoBehaviour
     public static bool isContaminated;
 
     [SerializeField]
-    private const float contaminationCase0 = 15f;
+    private const float contaminationCase0 = 30f;
 
 
     [SerializeField]
-    private const float contaminationCase1 = 30f;
+    private const float contaminationCase1 = 60f;
 
 
     [SerializeField]
-    private const float contaminationCase2 = 45f;
+    private const float contaminationCase2 = 90f;
 
 
     [SerializeField]
-    private const float contaminationCase3 = 60f;
+    private const float contaminationCase3 = 120f;
 
     [SerializeField]
-    private const float contaminationCase4 = 60f;
+    private const float contaminationCase4 = 120f;
 
 
 
 
     void Start()
     {
-        contaminationLevel = 1;
+        contaminationMultiplier = 0.5f;
         contaminationTimer = 0;
         isContaminated = false;
 
@@ -62,10 +62,10 @@ public class Contamination_System : MonoBehaviour
     {
         // contaminationCase = contaminationTimer;
 
-        // Debug.Log(contaminationTimer);
-        if (isContaminated && contaminationTimer < 60)
+        Debug.Log(contaminationTimer);
+        if (isContaminated && contaminationTimer < 120)
         {
-            contaminationTimer += Time.deltaTime * contaminationLevel;
+            contaminationTimer += Time.deltaTime * contaminationMultiplier;
 
             switch (contaminationTimer)
             {
@@ -79,18 +79,18 @@ public class Contamination_System : MonoBehaviour
                     //   Debug.Log("You hear Heartbeats");
                     break;
 
-                case < 45f:
+                case < contaminationCase2:
                     currentBeat = Contamination_Beats.Level2;
                     //  Debug.Log("You see a black Vignette");
                     break;
 
-                case < 60f:
+                case < contaminationCase3:
                     currentBeat = Contamination_Beats.Level3;
                     // Debug.Log("You see a red Vignette");
 
                     break;
 
-                case >= 60f:
+                case >= contaminationCase4:
                     currentBeat = Contamination_Beats.Level4;
 
                     //  Debug.Log("You are now a beast");
@@ -103,6 +103,10 @@ public class Contamination_System : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         isContaminated = true;
+
+        Contamination_effects.nextCough = Time.time + Contamination_effects.preDelay;
+
+
     }
 
     public Contamination_Beats CurrentBeats()

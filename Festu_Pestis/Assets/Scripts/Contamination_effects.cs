@@ -7,11 +7,11 @@ using UnityEngine.Audio;
 public class Contamination_effects : MonoBehaviour
 {
     [SerializeField]
-    private float coughRate = 2f;
+    private float coughRate = 5f;
     [SerializeField]
-    private float nextCough = 0.0f;
+    public static float nextCough = 0.0f;
     [SerializeField]
-    private float coughDuration = 1f;
+    private float coughDuration = 2f;
 
 
     private float timerCoughDuration = 0f;
@@ -28,7 +28,7 @@ public class Contamination_effects : MonoBehaviour
     private float wolfSpeed = 100.0f;
 
     [SerializeField]
-    private float preDelay = 3.0f;
+    public static float preDelay = 3.0f;
 
 
     [SerializeField]
@@ -46,13 +46,18 @@ public class Contamination_effects : MonoBehaviour
 
     void Update()
     {
-        if (Contamination_System.isContaminated && Contamination_System.contaminationTimer <= 15)
+     
+       
+
+        if (Contamination_System.isContaminated && Contamination_System.contaminationTimer <= 30)
         {
+            
             Cough();
         }
 
         if (isCoughing)
         {
+
             timerCoughDuration += Time.deltaTime;
 
             if (timerCoughDuration >= coughDuration)
@@ -60,7 +65,7 @@ public class Contamination_effects : MonoBehaviour
                 StopCoughing();
             }
         }
-        if (Contamination_System.isContaminated && Contamination_System.contaminationTimer >= 60)
+        if (Contamination_System.isContaminated && Contamination_System.contaminationTimer >= 120)
         {
             WolfMode();
             isWolf = true;

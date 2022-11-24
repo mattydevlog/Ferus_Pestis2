@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5393215579111688472}
-  contaminationLevel: 0
+  contaminationMultiplier: 0
 --- !u!65 &691243373
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1622,7 +1622,7 @@ PrefabInstance:
     - target: {fileID: 5393215579111688477, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: coughRate
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5393215579111688477, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
