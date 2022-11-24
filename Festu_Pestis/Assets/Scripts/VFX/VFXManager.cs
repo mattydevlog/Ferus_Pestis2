@@ -584,7 +584,7 @@ public class VFXManager : MonoBehaviour
 
             currentPulse = maxPulse * pulseCurve.Evaluate(timerPulse / pulseDuration);
 
-            lensDistortion.intensity.value = currentPulse;
+            lensDistortion.intensity.value = Mathf.PingPong(Time.time, currentPulse);
         }
         
     } 
