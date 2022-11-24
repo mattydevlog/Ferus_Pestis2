@@ -1622,12 +1622,12 @@ PrefabInstance:
     - target: {fileID: 5393215579111688477, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: coughRate
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5393215579111688477, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: wolfSpeed
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5393215579111688477, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
@@ -1637,7 +1637,7 @@ PrefabInstance:
     - target: {fileID: 5393215579111688477, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: coughMovementSpeed
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
