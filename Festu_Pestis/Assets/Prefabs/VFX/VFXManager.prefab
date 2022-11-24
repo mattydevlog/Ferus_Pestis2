@@ -44,8 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2454a39f880116d49be2b19dbf5ff93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contaminationSystem: {fileID: 0}
+  vignette: {fileID: 2100000, guid: daafbbb3732c3ee4b8533d48cc2941e2, type: 2}
+  volume: {fileID: 0}
   redVignetteOpacityTriggerLevel: 1
-  vignetteIntensityCurve:
+  vignetteOpacityCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
@@ -62,6 +65,34 @@ MonoBehaviour:
       value: 1
       inSlope: 1
       outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  vignetteOpacityDuration: 10
+  vignetteOpacity: 0.6
+  currentVignetteOpacity: 0
+  redVignetteIntensityTriggerLevel: 1
+  vignetteIntensityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
@@ -156,7 +187,112 @@ MonoBehaviour:
   blurDuration: 100
   maxBlurAmount: 40
   currentBlurAmount: 0
-  pulseTriggerLevel: 0
-  contaminationSystem: {fileID: 0}
-  vignette: {fileID: 2100000, guid: daafbbb3732c3ee4b8533d48cc2941e2, type: 2}
-  volume: {fileID: 0}
+  pulseTriggerLevel: 1
+  pulseCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -10.350496
+      outSlope: -10.350496
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.09661373
+      value: 0
+      inSlope: -0.41702127
+      outSlope: -0.41702127
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.20169489
+      value: 1
+      inSlope: -0.3376522
+      outSlope: -0.3376522
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.30000353
+      value: -0.0019378662
+      inSlope: 0.089779854
+      outSlope: 0.089779854
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.39661014
+      value: 1
+      inSlope: 0.35024977
+      outSlope: 0.35024977
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.500014
+      value: 0
+      inSlope: -0.29636717
+      outSlope: -0.29636717
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6101694
+      value: 1
+      inSlope: -1.0054226
+      outSlope: -1.0054226
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6999999
+      value: 0.0038757324
+      inSlope: -0.4779687
+      outSlope: -0.4779687
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.798305
+      value: 1
+      inSlope: -0.021165848
+      outSlope: -0.021165848
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.89658195
+      value: 0
+      inSlope: -0.25291586
+      outSlope: -0.25291586
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 9.669492
+      outSlope: 9.669492
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  pulseDuration: 10
+  maxPulse: 0.2
+  currentPulse: 0

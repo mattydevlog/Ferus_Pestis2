@@ -96,12 +96,12 @@ public class VFXManager : MonoBehaviour
     bool pulseActive = false;
     
     
-    /*[SerializeField] AnimationCurve pulseCurve;
+    [SerializeField] AnimationCurve pulseCurve;
     [SerializeField] float pulseDuration = 10;
     float timerPulse = 0;
     
     [SerializeField] float maxPulse = 0.2f;
-    [SerializeField] float currentPulse = 0;*/
+    [SerializeField] float currentPulse = 0;
 
     private void Awake()
     {
@@ -195,7 +195,8 @@ public class VFXManager : MonoBehaviour
         }
         else
         {
-            lensDistortion.intensity.value = Mathf.PingPong(Time.time / 2, 0.2f);
+            //lensDistortion.intensity.value = Mathf.PingPong(Time.time / 2, 0.2f);
+            PulseFadeIn();
         }
         
 
@@ -574,7 +575,7 @@ public class VFXManager : MonoBehaviour
         
     }
     
-    /*private void PulseFadeIn()
+    private void PulseFadeIn()
     {
         
         if(timerPulse  < pulseDuration)
@@ -586,7 +587,7 @@ public class VFXManager : MonoBehaviour
             lensDistortion.intensity.value = currentPulse;
         }
         
-    } */
+    } 
 
  
  
