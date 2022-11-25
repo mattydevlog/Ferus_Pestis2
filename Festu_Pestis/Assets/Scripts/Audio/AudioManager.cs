@@ -8,6 +8,17 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager Instance;
 
+    [Header("Atmospheric Audio Groups")]
+    
+    [Header("Outdoor Audio")]
+    [SerializeField] AnimationCurve atmosphereCurve;
+    [SerializeField] float atmosphereCurveDuration = 10f;
+    float timerAtmosphereCurveDuration = 0;
+    [SerializeField] [Range(-80, 20)] float atmosphereVolume = -8;
+    float currentAtmosphereVolume = -8;
+
+    bool atmosphereActive = false;
+
     [Header("Audio Contamination Transitions")]
 
     [Header("Animal Noise Sound FX")]
@@ -90,6 +101,15 @@ public class AudioManager : MonoBehaviour
     private void Update()
     {
 
+        if (!atmosphereActive)
+        {
+            ActivateAtmosphere();
+        }
+        else
+        {
+            AtmosphereFadeIn();
+        }
+
         if (!playerHumanActive)
         {
             ActivatePlayerHuman();
@@ -117,6 +137,11 @@ public class AudioManager : MonoBehaviour
             AnimalNoiseFadeIn();
         }
 
+    }
+
+    private void ActivateAtmosphere()
+    {
+        atmosphereActive = true;
     }
 
     private void ActivatePlayerHuman()
@@ -287,6 +312,17 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    private void AtmosphereFadeIn()
+    {
+
+        if(timerAtmosphereCurveDuration < atmosphereCurveDuration)
+        {
+            timerAtmosphereCurveDuration += Time.deltaTime;
+            currentAtmosphereVolume = atmosphereVolume * atmosphereCurve.Evaluate(timerAtmosphereCurveDuration / atmosphereCurveDuration);
+            audioMixer.SetFloat("BackgroundVolume", currentAtmosphereVolume);
+        }
+
+    }
     private void PlayerHumanFadeIn()
     {
 
