@@ -7,11 +7,13 @@ public class Contamination_System : MonoBehaviour
 {
     public enum Contamination_Beats
     {
-        Level0 = 0,
-        Level1 = 1,
-        Level2 = 2,
-        Level3 = 3,
-        Level4 = 4
+
+        NotContaminated,
+        Level0 = 1,
+        Level1 = 2,
+        Level2 = 3,
+        Level3 = 4,
+        Level4 = 5
     }
 
     public static Contamination_Beats currentBeat;
@@ -55,6 +57,7 @@ public class Contamination_System : MonoBehaviour
         contaminationMultiplier = 0.5f;
         contaminationTimer = 0;
         isContaminated = false;
+        currentBeat = Contamination_Beats.NotContaminated;
 
     }
 
@@ -62,7 +65,8 @@ public class Contamination_System : MonoBehaviour
     {
         // contaminationCase = contaminationTimer;
 
-        Debug.Log(contaminationTimer);
+        Debug.Log(currentBeat);
+        // Debug.Log(contaminationTimer);
         if (isContaminated && contaminationTimer < 120)
         {
             contaminationTimer += Time.deltaTime * contaminationMultiplier;
@@ -115,6 +119,10 @@ public class Contamination_System : MonoBehaviour
 
     }
 
+    public float CurrentTime()
+    {
+        return contaminationTimer;
+    }
 }
 
 
