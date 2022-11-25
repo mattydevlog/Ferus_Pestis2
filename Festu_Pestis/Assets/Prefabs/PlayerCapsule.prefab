@@ -198,7 +198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 4
   SprintSpeed: 6
   RotationSpeed: 1
   SpeedChangeRate: 10
@@ -363,5 +362,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coughRate: 5
-  nextCough: 0
   coughDuration: 1.5
+  contaminationSystem: {fileID: 0}
+  MovementTriggerLevel: 0
+  movementCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.00006379979
+      value: 0.4967374
+      inSlope: 0.0072833872
+      outSlope: 0.0072833872
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.69958454
+      value: 0.5018332
+      inSlope: 0.011533778
+      outSlope: 0.011533778
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.43773818
+    - serializedVersion: 3
+      time: 0.87336826
+      value: 0.9136643
+      inSlope: 1.5257884
+      outSlope: 1.5257884
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.68178576
+      outSlope: 0.68178576
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  movementDuration: 120
+  maxMovementSpeed: 8
+  currentMovementSpeed: 4
+  normalSpeed: 4
+  coughMovementSpeed: 2
+  wolfSpeed: 100
+  cough: {fileID: 0}
