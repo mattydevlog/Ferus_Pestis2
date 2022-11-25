@@ -47,6 +47,7 @@ MonoBehaviour:
   contaminationSystem: {fileID: 0}
   vignette: {fileID: 2100000, guid: daafbbb3732c3ee4b8533d48cc2941e2, type: 2}
   volume: {fileID: 0}
+  camera: {fileID: 0}
   redVignetteOpacityTriggerLevel: 0
   vignetteOpacityCurve:
     serializedVersion: 2
@@ -323,3 +324,58 @@ MonoBehaviour:
   pulseDuration: 120
   maxPulse: 0.2
   currentPulse: 0
+  FOVTriggerLevel: 0
+  fovCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0008631733
+      value: 0.7999344
+      inSlope: -Infinity
+      outSlope: -Infinity
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.84995914
+      value: 0.8001208
+      inSlope: 0.035312515
+      outSlope: 0.035312515
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.8838663
+      value: 0.9799478
+      inSlope: 0.01940154
+      outSlope: 0.01940154
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.9165849
+      value: 0.9432064
+      inSlope: 0.0037784213
+      outSlope: 0.0037784213
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.20960386
+    - serializedVersion: 3
+      time: 0.9998641
+      value: 0.9513931
+      inSlope: 0.09830424
+      outSlope: 0.09830424
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  fovDuration: 120
+  maxFov: 77
+  currentFov: 77

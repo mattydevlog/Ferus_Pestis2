@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Transactions;
+using Cinemachine;
 using UnityEditor.TextCore.Text;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -15,6 +16,9 @@ public class VFXManager : MonoBehaviour
     [SerializeField] Contamination_System contaminationSystem;
     [SerializeField] Material vignette;
     [SerializeField] Volume volume;
+    [SerializeField] CinemachineVirtualCamera camera;
+     
+  
 
     [Header("Vignette FX")]
     
@@ -102,6 +106,21 @@ public class VFXManager : MonoBehaviour
     
     [SerializeField] float maxPulse = 0.2f;
     [SerializeField] float currentPulse = 0;
+    
+    [Header("Camera")] 
+    
+    [Header("FOV")]
+    [SerializeField] [Range(0, 4)] int FOVTriggerLevel = 0;
+    
+    bool fovActive = false;
+    
+    
+    [SerializeField] AnimationCurve fovCurve;
+    [SerializeField] float fovDuration = 10;
+    float timerFov = 0;
+    
+    [SerializeField] float maxFov = 120;
+    [SerializeField] float currentFov = 0;
 
     private void Awake()
     {
@@ -197,6 +216,16 @@ public class VFXManager : MonoBehaviour
         {
             //lensDistortion.intensity.value = Mathf.PingPong(Time.time / 2, 0.2f);
             PulseFadeIn();
+        }
+        
+        if (!fovActive)
+        {
+            ActivateFov();
+        }
+        else
+        {
+            //lensDistortion.intensity.value = Mathf.PingPong(Time.time / 2, 0.2f);
+            FovFadeIn();
         }
         
 
@@ -508,7 +537,58 @@ public class VFXManager : MonoBehaviour
 
                 break;
         }
+    }private void ActivateFov()
+    {
+        switch (FOVTriggerLevel)
+        {
+            case 0: //Infected
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level0)
+                {
+                    fovActive = true;
+                }
+
+                break;
+
+            case 1: //Beat 1
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level1)
+                {
+                    fovActive = true;
+                }
+
+                break;
+
+            case 2: //Beat 2
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level2)
+                {
+                    fovActive = true;
+                }
+
+                break;
+
+            case 3: //Beat 3
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level3)
+                {
+                    fovActive = true;
+                }
+
+                break;
+
+            case 4: //Full Transitioned
+
+                if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level4)
+                {
+                    fovActive = true;
+                }
+
+                break;
+        }
     }
+    
+    
 
     private void VignetteFadeIn()
     {
@@ -585,6 +665,18 @@ public class VFXManager : MonoBehaviour
             currentPulse = maxPulse * pulseCurve.Evaluate(timerPulse / pulseDuration);
 
             lensDistortion.intensity.value = Mathf.PingPong(Time.time, currentPulse);
+        }
+        
+    }  private void FovFadeIn()
+    {
+        
+        if(timerFov  < fovDuration)
+        {
+            timerFov += Time.deltaTime;
+
+            currentFov = maxFov * fovCurve.Evaluate(timerFov / fovDuration);
+
+            camera.m_Lens.FieldOfView = currentFov;   
         }
         
     } 
