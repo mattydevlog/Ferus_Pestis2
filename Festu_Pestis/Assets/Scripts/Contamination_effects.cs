@@ -18,6 +18,23 @@ public class Contamination_effects : MonoBehaviour
 
     private bool isCoughing;
 
+    [Header("Movement Speed Curve")] 
+    
+    [SerializeField] Contamination_System contaminationSystem;
+    
+    [SerializeField] [Range(0, 4)] int MovementTriggerLevel = 0;
+    
+    bool movementActive = false;
+    
+    [SerializeField] AnimationCurve movementCurve;
+    [SerializeField] float movementDuration = 10;
+    float timerMovement = 0;
+
+    [SerializeField] float maxMovementSpeed = 8f;
+    [SerializeField] float currentMovementSpeed = 0;
+
+    [Header("Movement Values")]
+    
     [SerializeField]
     private float normalSpeed = 4.0f;
 
@@ -46,8 +63,16 @@ public class Contamination_effects : MonoBehaviour
 
     void Update()
     {
-     
-       
+        //Active Check Movement Curve
+        if (!movementActive)
+        {
+            ActivateMovement();
+        }
+        else
+        {
+            MovementFadeIn();
+        }
+
 
         if (Contamination_System.isContaminated && Contamination_System.contaminationTimer <= 30)
         {
@@ -104,5 +129,71 @@ public class Contamination_effects : MonoBehaviour
     {
         FirstPersonController.MoveSpeed = wolfSpeed;
         Debug.Log("Fast!");
+    }
+    
+    //Movement Curve
+    
+    private void ActivateMovement()
+    {
+          switch (MovementTriggerLevel) 
+          {
+            case 0: //Infected
+
+             if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level0)
+             {
+                 movementActive = true;
+             }
+
+             break;
+
+             case 1: //Beat 1
+
+            if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level1)
+            {
+                movementActive  = true;
+            }
+
+            break;
+
+            case 2: //Beat 2
+
+            if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level2)
+            {
+                movementActive  = true;
+            }
+
+            break;
+
+             case 3: //Beat 3
+
+            if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level3)
+            {
+                movementActive  = true;
+            }
+
+            break;
+
+           case 4: //Full Transitioned
+
+            if (contaminationSystem.CurrentBeats() == Contamination_System.Contamination_Beats.Level4)
+            {
+                movementActive  = true;
+            }
+
+            break;
+         }
+    }
+    
+    private void MovementFadeIn()
+    {
+        if(timerMovement  < movementDuration)
+        {
+            timerMovement += Time.deltaTime;
+
+            currentMovementSpeed = maxMovementSpeed * movementCurve.Evaluate(timerMovement / movementDuration);
+            FirstPersonController.MoveSpeed = currentMovementSpeed;
+            
+        }
+        
     }
 }
