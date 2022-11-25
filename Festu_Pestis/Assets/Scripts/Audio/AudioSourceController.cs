@@ -29,10 +29,10 @@ public class AudioSourceController : MonoBehaviour
         
         if(playTriggerTime > -1)
         {
-            /*if(playTriggerTime = contaminationSystem.CurrentTime())
+            if(playTriggerTime == contaminationSystem.CurrentTime())
             {
 
-            }*/
+            }
         }
 
     }
