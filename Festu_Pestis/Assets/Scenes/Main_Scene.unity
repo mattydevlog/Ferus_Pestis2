@@ -133,9 +133,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1855753111}
     m_Modifications:
+    - target: {fileID: 425184804, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.68
+      objectReference: {fileID: 0}
     - target: {fileID: 425184805, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
       propertyPath: Pan2D
-      value: 0.1
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 425184805, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
       propertyPath: m_Pitch
@@ -391,9 +395,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1855753111}
     m_Modifications:
+    - target: {fileID: 425184804, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 425184804, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 425184805, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
       propertyPath: Pan2D
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 425184805, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
       propertyPath: m_Pitch
@@ -1504,6 +1516,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1855753111}
     m_Modifications:
+    - target: {fileID: 425184804, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.111
+      objectReference: {fileID: 0}
+    - target: {fileID: 425184804, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.861
+      objectReference: {fileID: 0}
+    - target: {fileID: 425184805, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
+      propertyPath: Pan2D
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 425184805, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
       propertyPath: m_Pitch
       value: 0.98
@@ -2513,13 +2537,13 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: c1ae49b7baaf1f646964e362284f5b16, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 25
+  Priority: 200
   DopplerLevel: 1
   MinDistance: 4.9504952
   MaxDistance: 5
@@ -2706,16 +2730,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 1855753111}
     m_Modifications:
     - target: {fileID: 425184804, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.987
+      objectReference: {fileID: 0}
+    - target: {fileID: 425184804, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.293
       objectReference: {fileID: 0}
     - target: {fileID: 425184804, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.307
+      value: 1.29
       objectReference: {fileID: 0}
     - target: {fileID: 425184805, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
       propertyPath: Pan2D
-      value: -0.1
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 425184805, guid: 33da08acfe7b7d2418949805781eac24, type: 3}
       propertyPath: MaxDistance
