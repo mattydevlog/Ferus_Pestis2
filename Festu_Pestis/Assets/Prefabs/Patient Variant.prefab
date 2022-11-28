@@ -75,7 +75,30 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2447c66982337ad42a8d2db4f568e5bb,
         type: 3}
       propertyPath: m_Name
-      value: Patient
+      value: Patient Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2447c66982337ad42a8d2db4f568e5bb, type: 3}
+--- !u!1 &1959872428520465101 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2447c66982337ad42a8d2db4f568e5bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1725921298829696924}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3391111297803135988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959872428520465101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f283d03c57ea84bb2ed1e5a85c627a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patientHeart: {fileID: 2173737360008243616, guid: a35d355971c7ae64f95721d4c2ef064a,
+    type: 3}
+  patient: {fileID: 1959872428520465101}
+  bloodyFootsteps: {fileID: 0}
+  spawnPointFootsteps: {fileID: 0}
