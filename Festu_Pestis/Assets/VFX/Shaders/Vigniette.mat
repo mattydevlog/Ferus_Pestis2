@@ -47,13 +47,13 @@ Material:
     - _CastShadows: 1
     - _Cull: 2
     - _DstBlend: 10
-    - _FullscreenIntensity: 0.09196262
+    - _FullscreenIntensity: 0.60187685
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SrcBlend: 5
     - _Surface: 1
     - _VignietteIntensity: 0.6
-    - _VignietteRadiusPower: 8.022329
+    - _VignietteRadiusPower: 5.6126413
     - _VoronoiScale: 5.69
     - _VoronoiSpeed: 1
     - _ZTest: 4

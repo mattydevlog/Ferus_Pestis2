@@ -140,14 +140,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 714356807, guid: e8f7c17b5220d3847a5ed85fc366363d, type: 3}
-      propertyPath: patientHeart
-      value: 
-      objectReference: {fileID: 2173737360008243616, guid: a35d355971c7ae64f95721d4c2ef064a,
-        type: 3}
-    - target: {fileID: 714356807, guid: e8f7c17b5220d3847a5ed85fc366363d, type: 3}
       propertyPath: spawnPointFootsteps
       value: 
       objectReference: {fileID: 984145440}
+    - target: {fileID: 798467512, guid: e8f7c17b5220d3847a5ed85fc366363d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5392
+      objectReference: {fileID: 0}
+    - target: {fileID: 798467512, guid: e8f7c17b5220d3847a5ed85fc366363d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5392
+      objectReference: {fileID: 0}
+    - target: {fileID: 798467512, guid: e8f7c17b5220d3847a5ed85fc366363d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5392
+      objectReference: {fileID: 0}
+    - target: {fileID: 798467512, guid: e8f7c17b5220d3847a5ed85fc366363d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -140.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 798467512, guid: e8f7c17b5220d3847a5ed85fc366363d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 57
+      objectReference: {fileID: 0}
+    - target: {fileID: 798467512, guid: e8f7c17b5220d3847a5ed85fc366363d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 22.8
+      objectReference: {fileID: 0}
     - target: {fileID: 98534874077526472, guid: e8f7c17b5220d3847a5ed85fc366363d,
         type: 3}
       propertyPath: m_RootOrder

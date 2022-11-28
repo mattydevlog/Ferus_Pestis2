@@ -627,6 +627,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 714356807, guid: e8f7c17b5220d3847a5ed85fc366363d, type: 3}
+      propertyPath: spawnPointFootsteps
+      value: 
+      objectReference: {fileID: 1374078654}
     - target: {fileID: 98534874077526472, guid: e8f7c17b5220d3847a5ed85fc366363d,
         type: 3}
       propertyPath: m_RootOrder
@@ -1078,6 +1082,12 @@ MonoBehaviour:
   playTriggerTime: -1
   playStopTime: -1
   contaminationSystem: {fileID: 733542977}
+--- !u!1 &1374078654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 984145440, guid: 412b808d5d90cd244ba7d81c850500e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 982980803}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1407052018
 PrefabInstance:
   m_ObjectHideFlags: 0
