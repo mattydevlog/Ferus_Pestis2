@@ -13,6 +13,11 @@ public class Contamination_effects : MonoBehaviour
     [SerializeField]
     private float coughDuration = 2f;
 
+    [Header("Camera Shake")] 
+    [SerializeField] private float intensity;
+    [SerializeField] private float duration;
+    
+    
 
     private float timerCoughDuration = 0f;
 
@@ -110,6 +115,9 @@ public class Contamination_effects : MonoBehaviour
             isCoughing = true;
             FirstPersonController.MoveSpeed = coughMovementSpeed;
             cough.Play();
+            
+            CinemachineShake.Instance.ShakeCamera( intensity, duration);
+            
             Debug.Log("You coughed");
 
         }
