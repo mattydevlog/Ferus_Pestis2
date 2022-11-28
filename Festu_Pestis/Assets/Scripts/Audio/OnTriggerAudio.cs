@@ -9,6 +9,10 @@ public class OnTriggerAudio : MonoBehaviour
     bool audioPlayed = false;
     AudioSource audioSource;
 
+    [Header("Audio Trigger Stop")]
+    [SerializeField] AudioSource stopAudioSource;
+    [SerializeField] bool stopOnTrigger = false;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();    
@@ -27,6 +31,11 @@ public class OnTriggerAudio : MonoBehaviour
             {
                 audioSource.Play();
                 audioPlayed = true;
+            }
+
+            if (stopOnTrigger)
+            {
+                stopAudioSource.Stop();
             }
             
         }
