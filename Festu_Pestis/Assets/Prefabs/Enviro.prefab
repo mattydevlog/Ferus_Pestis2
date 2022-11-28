@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f283d03c57ea84bb2ed1e5a85c627a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientHeart: {fileID: 0}
+  patientHeart: {fileID: 2173737360008243616, guid: a35d355971c7ae64f95721d4c2ef064a,
+    type: 3}
   patient: {fileID: 1959872428520465101, guid: 918a98fd4603c04408ba8d0b6da180d7, type: 3}
   bloodyFootsteps: {fileID: 919132149155446097, guid: 8fe83eb2b9ba8e748985eb83c7034516,
     type: 3}
