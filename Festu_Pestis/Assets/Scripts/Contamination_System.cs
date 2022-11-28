@@ -65,7 +65,9 @@ public class Contamination_System : MonoBehaviour
     {
         // contaminationCase = contaminationTimer;
 
-        Debug.Log(currentBeat);
+
+
+       // Debug.Log(currentBeat);
         // Debug.Log(contaminationTimer);
         if (isContaminated && contaminationTimer < 120)
         {
