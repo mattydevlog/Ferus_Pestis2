@@ -365,36 +365,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coughRate: 8
   coughDuration: 2
-  intensity: 3
+  intensity: 10
   duration: 1.1
   contaminationSystem: {fileID: 0}
-  MovementTriggerLevel: 0
+  MovementTriggerLevel: 1
   movementCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: -0.00006379979
       value: 0.4967374
-      inSlope: 0.0072833872
-      outSlope: 0.0072833872
+      inSlope: -0.8805085
+      outSlope: -0.8805085
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.69958454
-      value: 0.5018332
-      inSlope: 0.011533778
-      outSlope: 0.011533778
+      time: 0.22609198
+      value: 0.2976053
+      inSlope: 0.10169916
+      outSlope: 0.10169916
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.43773818
+      outWeight: 0.07095877
     - serializedVersion: 3
-      time: 0.87336826
-      value: 0.9136643
-      inSlope: 1.5257884
-      outSlope: 1.5257884
+      time: 0.7507238
+      value: 0.2960567
+      inSlope: -0.15371366
+      outSlope: -0.15371366
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.7212776
+    - serializedVersion: 3
+      time: 0.86045295
+      value: 0.099290505
+      inSlope: -0.54130834
+      outSlope: -0.54130834
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.67788774
+    - serializedVersion: 3
+      time: 0.9176937
+      value: 0.10080171
+      inSlope: 1.1107751
+      outSlope: 1.1107751
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.018831553
+      outWeight: 0.6073282
+    - serializedVersion: 3
+      time: 0.99903965
+      value: 1.0024247
+      inSlope: 4.27949
+      outSlope: 4.27949
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -402,8 +429,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0.68178576
-      outSlope: 0.68178576
+      inSlope: -2.5248263
+      outSlope: -2.5248263
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -411,7 +438,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  movementDuration: 120
+  movementDuration: 90
   maxMovementSpeed: 8
   currentMovementSpeed: 4
   normalSpeed: 4
