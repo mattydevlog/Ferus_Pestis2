@@ -1419,9 +1419,9 @@ AudioSource:
   Priority: 15
   DopplerLevel: 1
   MinDistance: 5
-  MaxDistance: 7
+  MaxDistance: 12
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -1429,10 +1429,19 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.71428573
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -1.4005619
+      outSlope: -1.4005619
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.9803245
+      value: 0.7285868
+      inSlope: -0.73966444
+      outSlope: -0.73966444
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -1440,12 +1449,12 @@ AudioSource:
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.7145718
+      outSlope: -0.7145718
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -1827,7 +1836,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2042228190, guid: a401cac97c7012f4aacba9e37ccffb04, type: 3}
       propertyPath: Pan2D
-      value: -0.12
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042228190, guid: a401cac97c7012f4aacba9e37ccffb04, type: 3}
+      propertyPath: Priority
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1971037548718810205, guid: a401cac97c7012f4aacba9e37ccffb04,
         type: 3}
@@ -1847,7 +1860,7 @@ PrefabInstance:
     - target: {fileID: 1971037548718810205, guid: a401cac97c7012f4aacba9e37ccffb04,
         type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1971037548718810205, guid: a401cac97c7012f4aacba9e37ccffb04,
         type: 3}
@@ -2546,9 +2559,9 @@ AudioSource:
   Priority: 200
   DopplerLevel: 1
   MinDistance: 4.9504952
-  MaxDistance: 5
+  MaxDistance: 12
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -2556,23 +2569,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.9900991
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -1.0104038
+      outSlope: -1.0104038
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.9904951
+      outSlope: -0.9904951
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
