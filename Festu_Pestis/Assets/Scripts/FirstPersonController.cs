@@ -127,11 +127,11 @@ namespace StarterAssets
 
             if (Contamination_effects.isChaos)
             {
-                JumpHeight = 0.05f;
+                JumpHeight = 0f;
             }
             if (Contamination_effects.isWolf)
             {
-                JumpHeight = 1.8f;
+                JumpHeight = 1.65f;
             }
 
 
