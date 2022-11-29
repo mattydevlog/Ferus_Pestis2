@@ -21,7 +21,7 @@ public class ParticleEffects1 : MonoBehaviour
     {
         if (Contamination_System.isContaminated && Contamination_System.contaminationTimer > 90)
         {
-            Debug.Log("lol");
+      
             footsteps.SetActive(true);
         }
 
