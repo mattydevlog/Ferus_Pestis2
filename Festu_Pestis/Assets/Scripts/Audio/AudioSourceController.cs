@@ -37,7 +37,7 @@ public class AudioSourceController : MonoBehaviour
         
         if(playTriggerTime > -1)
         {
-            Debug.Log(contaminationSystem.CurrentTime());
+            //Debug.Log(contaminationSystem.CurrentTime());
 
             if(contaminationSystem.CurrentTime() >= playTriggerTime)
             {
