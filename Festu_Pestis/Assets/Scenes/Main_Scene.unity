@@ -783,6 +783,32 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 110967679, guid: 412b808d5d90cd244ba7d81c850500e0, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0712546
+      objectReference: {fileID: 0}
+    - target: {fileID: 110967679, guid: 412b808d5d90cd244ba7d81c850500e0, type: 3}
+      propertyPath: m_Center.x
+      value: -0.09952336
+      objectReference: {fileID: 0}
+    - target: {fileID: 110967679, guid: 412b808d5d90cd244ba7d81c850500e0, type: 3}
+      propertyPath: m_Center.y
+      value: 0.035627313
+      objectReference: {fileID: 0}
+    - target: {fileID: 110967679, guid: 412b808d5d90cd244ba7d81c850500e0, type: 3}
+      propertyPath: m_Center.z
+      value: 0.022271216
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063423994392753341, guid: 412b808d5d90cd244ba7d81c850500e0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.517
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063423994392753341, guid: 412b808d5d90cd244ba7d81c850500e0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.677
+      objectReference: {fileID: 0}
     - target: {fileID: 6223393705576831206, guid: 412b808d5d90cd244ba7d81c850500e0,
         type: 3}
       propertyPath: m_RootOrder
