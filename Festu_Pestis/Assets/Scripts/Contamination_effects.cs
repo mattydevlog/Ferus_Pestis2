@@ -57,11 +57,13 @@ public class Contamination_effects : MonoBehaviour
     private AudioSource cough;
 
     public static bool isWolf;
+    public static bool isChaos;
 
     void Start()
     {
         isCoughing = false;
         isWolf = false;
+        isChaos = false;
 
     }
 
@@ -100,6 +102,13 @@ public class Contamination_effects : MonoBehaviour
             WolfMode();
             isWolf = true;
         }
+
+        if (Contamination_System.contaminationTimer > 90 && Contamination_System.contaminationTimer < 119)
+        {
+            isChaos = true;
+        }
+
+        
 
     }
 
