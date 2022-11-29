@@ -795,6 +795,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6063423993951001720, guid: 412b808d5d90cd244ba7d81c850500e0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.70901
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063423993951001720, guid: 412b808d5d90cd244ba7d81c850500e0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.10382
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063423993951001720, guid: 412b808d5d90cd244ba7d81c850500e0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.26557314
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063423993951001720, guid: 412b808d5d90cd244ba7d81c850500e0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.26557294
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063423993951001720, guid: 412b808d5d90cd244ba7d81c850500e0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6553404
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063423993951001720, guid: 412b808d5d90cd244ba7d81c850500e0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.6553403
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063423993951001720, guid: 412b808d5d90cd244ba7d81c850500e0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063423993951001720, guid: 412b808d5d90cd244ba7d81c850500e0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -135.88
+      objectReference: {fileID: 0}
     - target: {fileID: 6223393705576831206, guid: 412b808d5d90cd244ba7d81c850500e0,
         type: 3}
       propertyPath: m_RootOrder
@@ -1035,6 +1075,32 @@ MonoBehaviour:
   playTriggerTime: -1
   playStopTime: -1
   contaminationSystem: {fileID: 733542977}
+--- !u!1 &1354231841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6876516504531617474, guid: 412b808d5d90cd244ba7d81c850500e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 982980803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1354231843
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354231841}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b83600d0360503b4d9c194190c7f527f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1407052018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1316,6 +1382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1658906817}
   - component: {fileID: 1658906819}
+  - component: {fileID: 1658906820}
   - component: {fileID: 1658906816}
   - component: {fileID: 1658906818}
   m_Layer: 0
@@ -1475,6 +1542,19 @@ MonoBehaviour:
   playOnce: 1
   stopAudioSource: {fileID: 1623359501}
   stopOnTrigger: 1
+--- !u!114 &1658906820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658906815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cced1d1e46d78b3418c9dbb909647c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  werewolfAnimator: {fileID: 1354231843}
 --- !u!1001 &1661863650
 PrefabInstance:
   m_ObjectHideFlags: 0
