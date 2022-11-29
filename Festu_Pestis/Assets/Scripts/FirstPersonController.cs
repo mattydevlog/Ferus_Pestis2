@@ -69,8 +69,8 @@ namespace StarterAssets
         private float _jumpTimeoutDelta;
         private float _fallTimeoutDelta;
         
-        //Other
-        public Contamination_System contaminationSystem;
+       
+       
 
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
@@ -131,7 +131,7 @@ namespace StarterAssets
             }
             if (Contamination_effects.isWolf)
             {
-                JumpHeight = 2f;
+                JumpHeight = 1.8f;
             }
 
 
