@@ -53,7 +53,7 @@ Material:
     - _SrcBlend: 5
     - _Surface: 1
     - _VignietteIntensity: 0
-    - _VignietteRadiusPower: 5.6126413
+    - _VignietteRadiusPower: 8.022329
     - _VoronoiScale: 5.69
     - _VoronoiSpeed: 1
     - _ZTest: 4

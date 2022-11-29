@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ParticleEffects : MonoBehaviour
@@ -11,24 +12,22 @@ public class ParticleEffects : MonoBehaviour
     [SerializeField]
     GameObject patient;
 
-    [SerializeField]
-    GameObject bloodyFootsteps;
+    public bool hasSpawned = false;
 
-    [SerializeField]
-    GameObject spawnPointFootsteps;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        // patientHeart.SetActive(false);
+
+    }
+
     void Update()
     {
-        if (Contamination_System.isContaminated && Contamination_System.contaminationTimer > 90)
+        if (Contamination_System.isContaminated && Contamination_System.contaminationTimer > 90 && !hasSpawned)
         {
-            Instantiate(patientHeart, patient.transform.position , Quaternion.identity);
-
-        }
-
-        if (Contamination_System.isContaminated && Contamination_System.contaminationTimer > 120)
-        {
-            Instantiate(bloodyFootsteps, spawnPointFootsteps.transform.position, Quaternion.identity);
+            Debug.Log("has spawned");
+            Instantiate(patientHeart, patient.transform.position, Quaternion.identity);
+            hasSpawned = true;
         }
 
     }
