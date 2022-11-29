@@ -54,8 +54,8 @@ public class Contamination_System : MonoBehaviour
 
     void Start()
     {
-        contaminationMultiplier = 0.5f;
-        contaminationTimer = 85;
+        contaminationMultiplier = 1f;
+        contaminationTimer = 0f;
         isContaminated = false;
         currentBeat = Contamination_Beats.NotContaminated;
 
