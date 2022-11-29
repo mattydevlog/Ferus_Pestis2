@@ -26,7 +26,9 @@ namespace StarterAssets
 
         [Space(10)]
         [Tooltip("The height the player can jump")]
-        public float JumpHeight = 1.2f;
+        public float JumpHeight = 0.5f;
+        
+        
         [Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
         public float Gravity = -15.0f;
 
@@ -66,6 +68,9 @@ namespace StarterAssets
         // timeout deltatime
         private float _jumpTimeoutDelta;
         private float _fallTimeoutDelta;
+        
+        //Other
+        public Contamination_System contaminationSystem;
 
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
@@ -118,6 +123,16 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+
+
+            if (Contamination_effects.isChaos)
+            {
+                JumpHeight = 0.05f;
+            }
+            if (Contamination_effects.isWolf)
+            {
+                JumpHeight = 2f;
+            }
 
 
 
@@ -207,7 +222,7 @@ namespace StarterAssets
 
         private void JumpAndGravity()
         {
-            if (Grounded && Contamination_effects.isWolf)
+            if (Grounded)
             {
                 // reset the fall timeout timer
                 _fallTimeoutDelta = FallTimeout;
