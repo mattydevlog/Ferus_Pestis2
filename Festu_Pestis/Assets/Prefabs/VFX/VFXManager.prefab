@@ -120,7 +120,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   vignetteIntensityDuration: 120
-  vignetteIntensity: 0.6
+  vignetteIntensity: 0.9
   currentVignetteIntensity: 0
   redVignetteSizeTriggerLevel: 0
   vignetteSizeCurve:
