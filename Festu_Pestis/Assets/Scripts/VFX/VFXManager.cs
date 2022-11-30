@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Transactions;
 using Cinemachine;
-using UnityEditor.TextCore.Text;
+
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;

@@ -699,6 +699,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enviro_NewLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 98534874578538089, guid: e8f7c17b5220d3847a5ed85fc366363d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8f7c17b5220d3847a5ed85fc366363d, type: 3}
 --- !u!114 &733542977 stripped
@@ -795,6 +800,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 566997691, guid: 412b808d5d90cd244ba7d81c850500e0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 984145440, guid: 412b808d5d90cd244ba7d81c850500e0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556227990, guid: 412b808d5d90cd244ba7d81c850500e0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6223393705576831206, guid: 412b808d5d90cd244ba7d81c850500e0,
         type: 3}
       propertyPath: m_RootOrder
@@ -1068,6 +1085,11 @@ PrefabInstance:
       propertyPath: contaminationSystem
       value: 
       objectReference: {fileID: 733542977}
+    - target: {fileID: 546681101947753864, guid: 6f33e6b0da689194eb60c77354d15ae8,
+        type: 3}
+      propertyPath: redVignetteOpacityTriggerLevel
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 546681101947753865, guid: 6f33e6b0da689194eb60c77354d15ae8,
         type: 3}
       propertyPath: m_RootOrder
@@ -1127,6 +1149,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VFXManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 546681101947753867, guid: 6f33e6b0da689194eb60c77354d15ae8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f33e6b0da689194eb60c77354d15ae8, type: 3}
@@ -1733,6 +1760,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Global Volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340845739567850000, guid: 27f4523a1d3f6d149acdd34ecb0f2296,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340845739567850001, guid: 27f4523a1d3f6d149acdd34ecb0f2296,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5340845739567850002, guid: 27f4523a1d3f6d149acdd34ecb0f2296,
         type: 3}
@@ -2684,6 +2721,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
+        type: 3}
       propertyPath: field of view
       value: 67.64984
       objectReference: {fileID: 0}
@@ -2696,6 +2738,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MainCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018249871969862650, guid: 2d3a85ecde41a8246a79669975912b74,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
